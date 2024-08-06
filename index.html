@@ -226,7 +226,7 @@ h2 {
                                 <p data-animation="fadeInLeft" data-delay="0.1s">At SIMS Hospitals, we specialize in providing comprehensive cardiovascular care.<strong>Get a Doctor Book An Appointment in Just 15 mins</strong></p>
                                 <div class="col-lg-5 col-md-12 appointment-container" >
                                     <h2>Book an Appointment</h2>
-                                    <form class="appointment-form">
+                                    <form class="appointment-form" id="appointmentForm">
                                         <input type="text" placeholder="Name" class="form-input" required>
                                         <input type="text" placeholder="City" class="form-input" required>
                                         <input type="text" placeholder="Phone" class="form-input" required>
@@ -258,7 +258,7 @@ h2 {
                                 <p data-animation="fadeInLeft" data-delay="0.1s">At SIMS Hospitals, we specialize in providing comprehensive cardiovascular care.<strong>Get a Doctor Book An Appointment in Just 15 mins</strong></p>
                                 <div class="col-lg-5 col-md-12 appointment-container">
                                     <h2>Book an Appointment</h2>
-                                    <form class="appointment-form">
+                                    <form class="appointment-form" id="appointmentForm">
                                         <input type="text" placeholder="Name" class="form-input" required>
                                         <input type="text" placeholder="City" class="form-input" required>
                                         <input type="text" placeholder="Phone" class="form-input" required>
@@ -1046,6 +1046,39 @@ h2 {
           });
         });
       </script>
+
+<script>
+    document.getElementById('appointmentForm').addEventListener('submit', function(event) {
+        // Basic JavaScript validation if needed
+        var isValid = true;
+    
+        var name = event.target.name.value;
+        var city = event.target.city.value;
+        var phone = event.target.phone.value;
+    
+        // Custom validation logic (if needed)
+        // For example, check if the phone number is exactly 10 digits long
+        if (!/^[A-Za-z\s]+$/.test(name)) {
+            isValid = false;
+            alert('Please enter a valid name.');
+        }
+    
+        if (!/^[A-Za-z\s]+$/.test(city)) {
+            isValid = false;
+            alert('Please enter a valid city.');
+        }
+    
+        if (!/^\d{10}$/.test(phone)) {
+            isValid = false;
+            alert('Please enter a valid 10-digit phone number.');
+        }
+    
+        // Prevent form submission if validation fails
+        if (!isValid) {
+            event.preventDefault();
+        }
+    });
+    </script>
       
     <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
     <!-- Jquery, Popper, Bootstrap -->
