@@ -138,6 +138,15 @@ h2 {
 .book-appointment-btn:hover, .send-otp-btn:hover {
     opacity: 0.8;
 }
+.slider-area .hero__caption h3 {
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 14px;
+    color: #102039;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
 
 </style>
 
@@ -215,14 +224,14 @@ h2 {
                         <div class="col-lg-7 col-md-12">
                             <div class="hero__caption">
                                 <span>Welcome to SIMS Institute of Cardiac Sciences</span>
-                                <h1 class="cd-headline letters scale" id="contact-form-main">
-                                    Our<br> Superspeciality<br> Quarternery<br> Care
+                                <h3 class="cd-headline letters scale" id="contact-form-main">
+                                    SIMS HOSPITALS: Your Heart, Our Priority - Comprehensive Cardio Care for a Healthier Tomorrow
                                     <strong class="cd-words-wrapper">
                                         <b class="is-visible">SIMS</b>
                                         <b>SIMS</b>
                                         <b>SIMS</b>
                                     </strong>
-                                </h1>
+                                </h3>
                                 <p data-animation="fadeInLeft" data-delay="0.1s">At SIMS Hospitals, we specialize in providing comprehensive cardiovascular care.<strong>Get a Doctor Book An Appointment in Just 15 mins</strong></p>
                                 <div class="col-lg-5 col-md-12 appointment-container" >
                                     <h2>Book an Appointment</h2>
@@ -247,14 +256,14 @@ h2 {
                         <div class="col-lg-7 col-md-12">
                             <div class="hero__caption">
                                 <span>Welcome to SIMS Institute of Cardiac Sciences</span>
-                                <h1 class="cd-headline letters scale" id="contact-form-main">
-                                    Our<br> Superspeciality<br> Quarternery<br> Care
+                                <h3 class="cd-headline letters scale" id="contact-form-main">
+                                    SIMS HOSPITALS: Your Heart, Our Priority - Comprehensive Cardio Care for a Healthier Tomorrow
                                     <strong class="cd-words-wrapper">
                                         <b class="is-visible">SIMS</b>
                                         <b>SIMS</b>
                                         <b>SIMS</b>
                                     </strong>
-                                </h1>
+                                </h3>
                                 <p data-animation="fadeInLeft" data-delay="0.1s">At SIMS Hospitals, we specialize in providing comprehensive cardiovascular care.<strong>Get a Doctor Book An Appointment in Just 15 mins</strong></p>
                                 <div class="col-lg-5 col-md-12 appointment-container">
                                     <h2>Book an Appointment</h2>
@@ -322,6 +331,7 @@ h2 {
                     <div class="section-tittle text-center mb-100">
                         <!-- <span>Our Departments</span> -->
                         <h2>Our Services</h2>
+                        <h3>Comprehensive Cardiology and Cardiothoracic Services</h3>
                     </div>
                 </div>
             </div>
@@ -364,7 +374,8 @@ h2 {
                             <li class="nav-item">
                                 <a class="nav-link" id="Blood-tab" data-toggle="tab" href="#Blood" role="tab" aria-controls="contact" aria-selected="false">
                                     <i class="fas fa-vial"></i>
-                                    <h4>Cardio Care</h4>
+                                    <h4>Cardio Services Packages
+                                    </h4>
                                 </a>
                             </li>
                         </ul>
@@ -1031,21 +1042,7 @@ h2 {
         <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
     </div>
 
-    <!-- JS here -->
-    <script type="text/javascript">
-        $(document).ready(function(){
-          $('.h1-testimonial-active').slick({
-            dots: true,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 2000,
-            arrows: false
-          });
-        });
-      </script>
+
 
 <script>
     document.getElementById('appointmentForm').addEventListener('submit', function(event) {
@@ -1055,7 +1052,6 @@ h2 {
         var name = event.target.name.value;
         var city = event.target.city.value;
         var phone = event.target.phone.value;
-    
         // Custom validation logic (if needed)
         // For example, check if the phone number is exactly 10 digits long
         if (!/^[A-Za-z\s]+$/.test(name)) {
